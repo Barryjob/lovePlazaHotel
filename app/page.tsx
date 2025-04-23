@@ -2,11 +2,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Utensils, Wifi, Phone, Mail, Clock, Star } from "lucide-react"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      {/* <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="w-[80%] mx-auto flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl font-bold">Love Plaza Hotel</span>
@@ -71,7 +73,8 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </header>
+      </header> */}
+      <SiteHeader />
       <main className="flex-1">
         <section className="relative">
           <div className="relative h-[600px] w-full">
@@ -361,7 +364,8 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="border-t bg-secondary text-white">
+      <SiteFooter />
+      {/* <footer className="border-t bg-secondary text-white">
         <div className="w-[80%] mx-auto flex flex-col gap-6 py-8 md:py-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-4">
@@ -443,7 +447,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }
